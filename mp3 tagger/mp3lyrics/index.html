@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Tekstów Piosenek</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Strona listy piosenek -->
+        <div id="song-list-page" class="active">
+            <div class="header">
+                <i class="fas fa-music logo"></i>
+                <h1>Lyrics Manager</h1>
+                <p class="subtitle">Zarządzaj swoją kolekcją tekstów</p>
+            </div>
+            
+            <div id="songs-container" class="song-list">
+                <!-- Tu będą dodawane karty z piosenkami -->
+                <div class="no-songs">Nie masz jeszcze żadnych zapisanych tekstów piosenek.</div>
+            </div>
+            
+            <a href="#" id="add-song-btn" class="button">
+                <i class="fas fa-plus"></i>
+                <span>Dodaj nową piosenkę</span>
+            </a>
+        </div>
+        
+        <!-- Strona dodawania/edycji piosenki -->
+        <div id="add-song-page">
+            <div class="header">
+                <i class="fas fa-edit logo"></i>
+                <h1 id="form-title">Dodaj nową piosenkę</h1>
+                <p class="subtitle">Wypełnij szczegóły piosenki</p>
+            </div>
+            
+            <div class="song-form">
+                <div class="form-group">
+                    <label for="song-title">Tytuł piosenki:</label>
+                    <input type="text" id="song-title" placeholder="Wpisz tytuł piosenki">
+                </div>
+                
+                <div class="form-group">
+                    <label for="song-artist">Wykonawca:</label>
+                    <input type="text" id="song-artist" placeholder="Wpisz wykonawcę">
+                </div>
+                
+                <div class="controls">
+                    <select id="section-type">
+                        <option value="intro">Intro</option>
+                        <option value="verse">Verse</option>
+                        <option value="pre-chorus">Pre-chorus</option>
+                        <option value="chorus">Chorus</option>
+                        <option value="bridge">Bridge</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <button id="add-section" class="button small">
+                        <i class="fas fa-plus"></i>
+                        <span>Dodaj sekcję</span>
+                    </button>
+                </div>
+                
+                <div id="song-sections">
+                    <!-- Sekcje piosenki będą dodawane tutaj -->
+                </div>
+                
+                <div class="form-actions">
+                    <button id="back-btn" class="button secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Wróć do listy</span>
+                    </button>
+                    <button id="save-song" class="button">
+                        <i class="fas fa-save"></i>
+                        <span>Zapisz piosenkę</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Strona podglądu piosenki -->
+        <div id="view-song-page">
+            <div class="header">
+                <i class="fas fa-eye logo"></i>
+                <h1 id="view-song-title"></h1>
+                <h2 id="view-song-artist"></h2>
+            </div>
+            
+            <div id="song-content" class="song-content">
+                <!-- Zawartość piosenki będzie wyświetlana tutaj -->
+            </div>
+            
+            <div class="view-actions">
+                <button id="delete-song-btn" class="button danger">
+                    <i class="fas fa-trash"></i>
+                    <span>Usuń piosenkę</span>
+                </button>
+                <button id="edit-song-btn" class="button">
+                    <i class="fas fa-edit"></i>
+                    <span>Edytuj</span>
+                </button>
+                <button id="back-to-list-btn" class="button secondary">
+                    <i class="fas fa-list"></i>
+                    <span>Wróć do listy</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

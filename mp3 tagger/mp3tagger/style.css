@@ -1,0 +1,223 @@
+/* styles.css */
+:root {
+    --primary-color: #2e7d32; /* ciemna zieleń */
+    --secondary-color: #81c784; /* jasna zieleń */
+    --success-color: #388e3c; /* średnia zieleń */
+    --light-color: #f1f8e9; /* bardzo jasna zieleń */
+    --dark-color: #1b1b1b; /* prawie czarny */
+    --text-color: #e0e0e0; /* jasny szary tekst */
+    --container-bg: #2e2e2e; /* ciemnoszare tło kontenera */
+    --border-color: #424242; /* kolor obramowań */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1b1b1b 0%, #2e2e2e 100%);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.container {
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    color: var(--secondary-color);
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.file-upload {
+    margin: 25px 0;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 2px dashed var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgba(129, 199, 132, 0.05);
+}
+
+.upload-label:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(129, 199, 132, 0.1);
+}
+
+.upload-label i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.upload-label span {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.upload-label input {
+    display: none;
+}
+
+.editor-fields {
+    margin-top: 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.editor-fields.visible {
+    opacity: 1;
+    max-height: 1000px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: var(--secondary-color);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    background-color: #424242;
+    color: var(--text-color);
+}
+
+input[type="text"]:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.3);
+}
+
+.cover-label {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #424242;
+}
+
+.cover-label:hover {
+    border-color: var(--secondary-color);
+}
+
+.cover-label span {
+    margin-left: 10px;
+    color: var(--secondary-color);
+}
+
+.cover-label input {
+    display: none;
+}
+
+.save-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-btn:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
+
+.save-btn i {
+    margin-right: 8px;
+}
+
+.file-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #424242;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.file-info.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}

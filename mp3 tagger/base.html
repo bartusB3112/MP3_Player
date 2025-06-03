@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2e7d32; /* ciemna zieleń */
+            --secondary-color: #81c784; /* jasna zieleń */
+            --success-color: #388e3c; /* średnia zieleń */
+            --light-color: #f1f8e9; /* bardzo jasna zieleń */
+            --dark-color: #1b1b1b; /* prawie czarny */
+            --text-color: #e0e0e0; /* jasny szary tekst */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1b1b1b 0%, #2e2e2e 100%);
+            margin: 0;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .container {
+            background: #2e2e2e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--text-color);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        .button-container {
+            margin: 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: calc(100% - 40px);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+        }
+
+        .button i {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-home logo"></i>
+            <h1>Witaj na Stronie Głównej</h1>
+            <p class="subtitle">Wybierz narzędzie do edycji plików MP3</p>
+        </div>
+        
+        <div class="button-container">
+            <a href="mp3viewer/index.html" class="button">
+                <i class="fas fa-music"></i>
+                <span>MP3 Player</span>
+            <a href="mp3tagger/index.html" class="button">
+                <i class="fas fa-music"></i>
+                <span>MP3 Tagger</span>
+            <a href="mp3lyrics/index.html" class="button">
+                <i class="fas fa-music"></i>
+                <span>Lyrics Management</span>
+            <a href="https://y2mate.nu/en-sDNs/" class="button">
+                <i class="fas fa-music"></i>
+                <span>YouTube Converter</span>
+            <a href="https://trackerhub.cx" class="button">
+                <i class="fas fa-music"></i>
+                <span>TrackerHub</span>
+            <a href="https://docs.google.com/spreadsheets/d/1zoOIaNbBvfuL3sS3824acpqGxOdSZSIHM8-nI9C-Vfc/edit?gid=1114336431#gid=1114336431" class="button">
+                <i class="fas fa-music"></i>
+                <span>Spreadsheet</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

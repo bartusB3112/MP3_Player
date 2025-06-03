@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edytor MP3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-music logo"></i>
+            <h1>MP3 Tagger</h1>
+            <p class="subtitle">Modyfikuj tagi ID3 swoich plików muzycznych</p>
+        </div>
+        
+        <div class="file-upload">
+            <label for="mp3File" class="upload-label">
+                <i class="fas fa-upload"></i>
+                <span>Wybierz plik MP3</span>
+                <input type="file" id="mp3File" accept="audio/mp3">
+            </label>
+        </div>
+        
+        <div id="editor-fields" class="editor-fields hidden">
+            <div class="form-group">
+                <label for="title"><i class="fas fa-heading"></i> Tytuł</label>
+                <input type="text" id="title" placeholder="Wprowadź tytuł">
+            </div>
+            
+            <div class="form-group">
+                <label for="artist"><i class="fas fa-user"></i> Wykonawca</label>
+                <input type="text" id="artist" placeholder="Wprowadź wykonawcę">
+            </div>
+            
+            <div class="form-group">
+                <label for="album"><i class="fas fa-compact-disc"></i> Album</label>
+                <input type="text" id="album" placeholder="Wprowadź album">
+            </div>
+            
+            <div class="form-group">
+                <label for="cover" class="cover-label">
+                    <i class="fas fa-image"></i> Okładka
+                    <span>Wybierz obraz</span>
+                    <input type="file" id="cover" accept="image/*">
+                </label>
+            </div>
+            
+            <button id="save" class="save-btn">
+                <i class="fas fa-save"></i> Zapisz i Pobierz
+            </button>
+        </div>
+        
+        <div id="file-info" class="file-info hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
